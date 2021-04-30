@@ -17,7 +17,8 @@ public class ExecturConfig {
     public ThreadPoolTaskExecutor mvcTaskExecutor() {
 
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        int i = Runtime.getRuntime().availableProcessors();//获取到服务器的cpu内核
+//        int i = Runtime.getRuntime().availableProcessors();//获取到服务器的cpu内核（会不太准确）
+//        executor.setCorePoolSize(i*2);//核心池大小
         executor.setCorePoolSize(5);//核心池大小
         executor.setMaxPoolSize(100);//最大线程数
         executor.setQueueCapacity(1000);//队列程度
