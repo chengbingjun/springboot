@@ -2,6 +2,7 @@ package com.srpingBootTest.exception;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,18 +15,9 @@ import java.util.Map;
 @ControllerAdvice
 public class AllException {
 
-//    @Autowired
-//    private ViewTradeService viewTradeService;
-
+    @ResponseBody
     @ExceptionHandler(value = Exception.class)
     public Map exceptionHandler(Exception e) {
-//        TradeInfo tradeInfo = new TradeInfo(
-//                "系统内部异常",
-//                "jandar",
-//                TradeStat.EXCEPTION,
-//                null
-//        );
-//        viewTradeService.happenTrade(tradeInfo);
         Map map = new HashMap();
         map.put("-1",e.getMessage());
         System.out.println("------------------->"+"hahahahha");
