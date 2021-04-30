@@ -1,4 +1,4 @@
-package com.srpingBootTest.ExecturConfig;
+package com.srpingBootTest.ExecutorConfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * @create 2020/10/20 15:56
  */
 @Configuration
-public class ExecturConfig {
+public class ExecutorConfig {
 
     @Bean("mvcTaskExecutor")
     public ThreadPoolTaskExecutor mvcTaskExecutor() {
